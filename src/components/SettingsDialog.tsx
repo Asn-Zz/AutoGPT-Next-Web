@@ -44,7 +44,7 @@ export const SettingsDialog: React.FC<{
   };
 
   const keyIsValid = (key: string | undefined) => {
-    const pattern = /^(sk-[a-zA-Z0-9]{48}|[a-fA-F0-9]{32})$/;
+    const pattern = /^(sk|fk)-/;
     return key && pattern.test(key);
   };
 
@@ -111,7 +111,7 @@ export const SettingsDialog: React.FC<{
         }
         type="range"
         toolTipProperties={{
-          message: t("temp-tips") as string,
+          message: t("temp-tips") ,
           disabled: false,
         }}
         attributes={{
@@ -134,7 +134,7 @@ export const SettingsDialog: React.FC<{
         }
         type="range"
         toolTipProperties={{
-          message: t("loop-tips") as string,
+          message: t("loop-tips") ,
           disabled: false,
         }}
         attributes={{
@@ -157,7 +157,7 @@ export const SettingsDialog: React.FC<{
         }
         type="range"
         toolTipProperties={{
-          message: t("tokens-tips") as string,
+          message: t("tokens-tips") ,
           disabled: false,
         }}
         attributes={{
