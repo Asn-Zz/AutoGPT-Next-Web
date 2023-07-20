@@ -44,7 +44,7 @@ export const SettingsDialog: React.FC<{
   };
 
   const keyIsValid = (key: string | undefined) => {
-    const pattern = /^(sk|fk)-/;
+    const pattern = /^(sk|fk|pk)-/;
     return key && pattern.test(key);
   };
 
